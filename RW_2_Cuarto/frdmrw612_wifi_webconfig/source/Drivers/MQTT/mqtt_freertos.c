@@ -117,14 +117,14 @@ static void mqtt_incoming_data_cb(void *arg, const u8_t *data, u16_t len, u8_t f
         // Detectar tópico y actuar según el mensaje
         if (strcmp(current_topic, "hoa/cuarto/comunicacion_a") == 0)
         {
-        	PRINTF("Mensaje de la aplicacion: %s \r\n", message);
+        	PRINTF("* Mensaje de la aplicacion: %s *\r\n", message);
         }
 
         if (strcmp(current_topic, "hoa/Persona/IMU") == 0)
         {
             if (strcmp(message, "posible caida") == 0)
         	{
-        		PRINTF("Se llamara a la ambulancia \r\n");
+        		PRINTF("** IMU: Se llamara a la ambulancia **\r\n");
         	}
         }
 
@@ -132,11 +132,11 @@ static void mqtt_incoming_data_cb(void *arg, const u8_t *data, u16_t len, u8_t f
         {
             if (strcmp(message, "presion alta") == 0)
         	{
-        		PRINTF("La presion esta alta \r\n");
+        		PRINTF("** Sensor Presion: La presion esta alta **\r\n");
         		RED_LED_ON();
         	} else if(strcmp(message, "presion normal") == 0)
         	{
-        		PRINTF("La presion volvio a su estado normal \r\n");
+        		PRINTF("** Sensor Presion: La presion volvio a su estado normal **\r\n");
         		RED_LED_OFF();
         	}
         }
@@ -145,7 +145,7 @@ static void mqtt_incoming_data_cb(void *arg, const u8_t *data, u16_t len, u8_t f
         {
             if (strcmp(message, "alguien") == 0)
         	{
-            	PRINTF("Movimiento \r\n");
+            	PRINTF("** Sensor Movimiento: Movimiento detectado ** \r\n");
             	for (int i=0; i<2;i++){
             		BLUE_LED_ON();
             	    vTaskDelay(pdMS_TO_TICKS(200));  // Delay
@@ -261,8 +261,9 @@ static void mqtt_message_published_cb(void *arg, err_t err)
 
     if (err == ERR_OK)
     {
+//    	if(strcmp(current_topic, "hoa/cuarto/comunicacion") == 0)
 //        PRINTF("Published to the topic \"%s\".\r\n", topic);
-    	PRINTF("\n");
+//    	PRINTF("\n");
     }
     else
     {
@@ -270,26 +271,11 @@ static void mqtt_message_published_cb(void *arg, err_t err)
     }
 }
 
-/*!
- * @brief Publishes a message. To be called on tcpip_thread.
- */
-//static void publish_message(void *ctx)
-//{
-//    static const char *topic   = "lwip_topic/100";
-//    static const char *message = "message from board";
-//
-//    LWIP_UNUSED_ARG(ctx);
-//
-//    PRINTF("Going to publish to the topic \"%s\"...\r\n", topic);
-//
-//    mqtt_publish(mqtt_client, topic, message, strlen(message), 1, 0, mqtt_message_published_cb, (void *)topic);
-//}
-
 static void publish_message(void *ctx)
 {
 	mqtt_args_t *params = (mqtt_args_t *)ctx;
 
-    //PRINTF("Going to publish to the topic \"%s\"...\r\n", params->topic);
+    PRINTF("\r\n");
 
     mqtt_publish(mqtt_client, params->topic, params->message, strlen(params->message), 1, 0, mqtt_message_published_cb, (void *)params->topic);
 }
@@ -307,6 +293,26 @@ void pre_publish(void *arg){
 	            }
 	        }
      vTaskDelete(NULL);
+}
+
+static void publish_ayuda(void *ctx)
+{
+    static const char *topic   = "hoa/cuarto/boton";
+    static const char *message;
+    static uint8_t counter = 0;
+
+    LWIP_UNUSED_ARG(ctx);
+
+    if ((counter % 5) == 0)
+    	message = "ayuda";
+    else
+    	message = "comunicar";
+
+    counter++;
+
+//    PRINTF("Going to publish to the topic \"%s\"...\r\n", topic);
+
+    mqtt_publish(mqtt_client, topic, message, strlen(message), 1, 0, mqtt_message_published_cb, (void *)topic);
 }
 
 /*!
@@ -353,21 +359,15 @@ static void app_thread(void *arg)
         PRINTF("Failed to obtain IP address: %d.\r\n", err);
     }
 
-    /* Publish some messages */
-//    for (i = 0; i < 5;)
-//    {
-//        if (connected)
-//        {
-//            err = tcpip_callback(publish_message, NULL);
-//            if (err != ERR_OK)
-//            {
-//                PRINTF("Failed to invoke publishing of a message on the tcpip_thread: %d.\r\n", err);
-//            }
-//            i++;
-//        }
-//
-//        sys_msleep(1000U);
-//    }
+    while (1)
+    {
+        if (connected)
+        {
+            tcpip_callback(publish_ayuda, NULL);
+        }
+
+        sys_msleep(2000U);
+    }
 
     vTaskDelete(NULL);
 }
