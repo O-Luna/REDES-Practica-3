@@ -1,0 +1,7 @@
+../component/conn_fwloader/nboot_hal.c:86:24:set_antipole	16	static
+../component/conn_fwloader/nboot_hal.c:91:27:nboot_hal_get_root_auth_parms	24	static
+../component/conn_fwloader/nboot_hal.c:145:34:nboot_hal_get_rotk_revoke	24	static
+../component/conn_fwloader/nboot_hal.c:160:27:nboot_hal_get_rotkh	24	static
+../component/conn_fwloader/nboot_hal.c:236:34:nboot_hal_get_root_key_type	16	static
+../component/conn_fwloader/nboot_hal.c:246:34:nboot_hal_get_pck_blob	32	static
+../component/conn_fwloader/nboot_hal.c:273:20:nboot_hal_get_sb3_manifest_params	24	static

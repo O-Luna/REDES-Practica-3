@@ -1,0 +1,64 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../lwip/src/apps/httpsrv/httpsrv.c \
+../lwip/src/apps/httpsrv/httpsrv_base64.c \
+../lwip/src/apps/httpsrv/httpsrv_fs.c \
+../lwip/src/apps/httpsrv/httpsrv_fs_data.c \
+../lwip/src/apps/httpsrv/httpsrv_script.c \
+../lwip/src/apps/httpsrv/httpsrv_sha1.c \
+../lwip/src/apps/httpsrv/httpsrv_supp.c \
+../lwip/src/apps/httpsrv/httpsrv_task.c \
+../lwip/src/apps/httpsrv/httpsrv_tls.c \
+../lwip/src/apps/httpsrv/httpsrv_utf8.c \
+../lwip/src/apps/httpsrv/httpsrv_ws.c \
+../lwip/src/apps/httpsrv/httpsrv_ws_api.c 
+
+C_DEPS += \
+./lwip/src/apps/httpsrv/httpsrv.d \
+./lwip/src/apps/httpsrv/httpsrv_base64.d \
+./lwip/src/apps/httpsrv/httpsrv_fs.d \
+./lwip/src/apps/httpsrv/httpsrv_fs_data.d \
+./lwip/src/apps/httpsrv/httpsrv_script.d \
+./lwip/src/apps/httpsrv/httpsrv_sha1.d \
+./lwip/src/apps/httpsrv/httpsrv_supp.d \
+./lwip/src/apps/httpsrv/httpsrv_task.d \
+./lwip/src/apps/httpsrv/httpsrv_tls.d \
+./lwip/src/apps/httpsrv/httpsrv_utf8.d \
+./lwip/src/apps/httpsrv/httpsrv_ws.d \
+./lwip/src/apps/httpsrv/httpsrv_ws_api.d 
+
+OBJS += \
+./lwip/src/apps/httpsrv/httpsrv.o \
+./lwip/src/apps/httpsrv/httpsrv_base64.o \
+./lwip/src/apps/httpsrv/httpsrv_fs.o \
+./lwip/src/apps/httpsrv/httpsrv_fs_data.o \
+./lwip/src/apps/httpsrv/httpsrv_script.o \
+./lwip/src/apps/httpsrv/httpsrv_sha1.o \
+./lwip/src/apps/httpsrv/httpsrv_supp.o \
+./lwip/src/apps/httpsrv/httpsrv_task.o \
+./lwip/src/apps/httpsrv/httpsrv_tls.o \
+./lwip/src/apps/httpsrv/httpsrv_utf8.o \
+./lwip/src/apps/httpsrv/httpsrv_ws.o \
+./lwip/src/apps/httpsrv/httpsrv_ws_api.o 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+lwip/src/apps/httpsrv/%.o: ../lwip/src/apps/httpsrv/%.c lwip/src/apps/httpsrv/subdir.mk
+	@echo 'Building file: $<'
+	@echo 'Invoking: MCU C Compiler'
+	arm-none-eabi-gcc -std=gnu99 -DCPU_RW612ETA2I -DCPU_RW612ETA2I_cm33_nodsp -DLWIP_TIMEVAL_PRIVATE=0 -DFSL_SDK_DRIVER_QUICK_ACCESS_ENABLE=1 -DUSE_RTOS=1 -DPRINTF_ADVANCED_ENABLE=1 -DLWIP_NETIF_API=1 -DHTTPSRV_CFG_WEBSOCKET_ENABLED=1 -DHTTPSRV_CFG_DEFAULT_SES_CNT=8 -DSDK_DEBUGCONSOLE_UART -DMCUXPRESSO_SDK -DBOOT_HEADER_ENABLE=1 -DMFLASH_FILE_BASEADDR=7340032 -DFSL_OSA_TASK_ENABLE=1 -DOSA_USED -DLWIP_DNS=1 -DLWIP_NETIF_HOSTNAME=1 -DLWIP_IGMP=1 -D_XOPEN_SOURCE=500 -DSO_REUSE=1 -DSDK_OS_FREE_RTOS -DSERIAL_PORT_TYPE_UART=1 -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -D__NEWLIB__ -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\source" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\wifi\wifidriver" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\wifi\incl" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\wifi\incl\wlcmgr" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\wifi\wifidriver\incl" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\wifi\wifidriver\wpa_supp_if" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\wifi\wifidriver\wpa_supp_if\incl" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\wifi\certs" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\wifi\firmware_dnld" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\wifi\sdio_nxp_abs" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\wifi\sdio_nxp_abs\incl" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\drivers\freertos" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\osa" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\conn_fwloader\include" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\conn_fwloader\fw_bin" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\conn_fwloader\fw_bin\inc" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\conn_fwloader\fw_bin\rw61x" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\conn_fwloader\fw_bin\script" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\flash\mflash\frdmrw612" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\flash\mflash" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\imu_adapter" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\utilities" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\lwip\src\apps\httpsrv" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\drivers" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\wifi\incl\wifidriver" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\wifi\incl\port\net" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\wifi\port\net" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\wifi\incl\port\net\hooks" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\lwip\port" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\lwip\src" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\lwip\src\include" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\edgefast_wifi\include" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\freertos\freertos-kernel\portable\GCC\ARM_CM33_NTZ\non_secure" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\flash_config" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\device" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\els_pkc" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\els_pkc\src\platforms\rw61x" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\wifi\incl\port\osa" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\wifi\wifi_bt_firmware" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\wifi" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\wifi\port\osa" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\wifi_bt_module\AzureWave\tx_pwr_limits" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\wifi_bt_module\Murata\tx_pwr_limits" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\wifi_bt_module\u-blox\tx_pwr_limits" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\wifi\dhcpd" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\lwip\src\include\lwip\apps" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\freertos\freertos-kernel\include" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\lists" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\serial_manager" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\uart" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\lwip\port\sys_arch\dynamic" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\CMSIS" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\els_pkc\src\comps\mcuxClEls\inc" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\els_pkc\src\comps\mcuxClEls\inc\internal" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\els_pkc\src\comps\mcuxClMemory\inc" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\els_pkc\src\comps\mcuxClMemory\inc\internal" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\els_pkc\src\comps\mcuxCsslMemory\inc" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\els_pkc\src\comps\mcuxCsslMemory\inc\internal" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\els_pkc\src\platforms\rw61x\inc" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\els_pkc\src\comps\mcuxClBuffer\inc" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\els_pkc\src\comps\mcuxClBuffer\inc\internal" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\els_pkc\src\comps\mcuxClCore\inc" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\els_pkc\src\comps\mcuxCsslParamIntegrity\inc" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\els_pkc\src\comps\mcuxCsslFlowProtection\inc" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\els_pkc\src\comps\mcuxCsslSecureCounter\inc" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\els_pkc\src\comps\mcuxCsslCPreProcessor\inc" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\els_pkc\src\compiler" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\component\els_pkc\src\comps\mcuxCsslDataIntegrity\inc" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\board" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\wifi\template" -I"C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\lwip\template" -O0 -fno-common -g3 -gdwarf-4 -mcpu=cortex-m33+nodsp -c -ffunction-sections -fdata-sections -fno-builtin -fmerge-constants -fmacro-prefix-map="$(<D)/"= -mcpu=cortex-m33+nodsp -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -D__NEWLIB__ -fstack-usage -specs=nano.specs -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+
+clean: clean-lwip-2f-src-2f-apps-2f-httpsrv
+
+clean-lwip-2f-src-2f-apps-2f-httpsrv:
+	-$(RM) ./lwip/src/apps/httpsrv/httpsrv.d ./lwip/src/apps/httpsrv/httpsrv.o ./lwip/src/apps/httpsrv/httpsrv_base64.d ./lwip/src/apps/httpsrv/httpsrv_base64.o ./lwip/src/apps/httpsrv/httpsrv_fs.d ./lwip/src/apps/httpsrv/httpsrv_fs.o ./lwip/src/apps/httpsrv/httpsrv_fs_data.d ./lwip/src/apps/httpsrv/httpsrv_fs_data.o ./lwip/src/apps/httpsrv/httpsrv_script.d ./lwip/src/apps/httpsrv/httpsrv_script.o ./lwip/src/apps/httpsrv/httpsrv_sha1.d ./lwip/src/apps/httpsrv/httpsrv_sha1.o ./lwip/src/apps/httpsrv/httpsrv_supp.d ./lwip/src/apps/httpsrv/httpsrv_supp.o ./lwip/src/apps/httpsrv/httpsrv_task.d ./lwip/src/apps/httpsrv/httpsrv_task.o ./lwip/src/apps/httpsrv/httpsrv_tls.d ./lwip/src/apps/httpsrv/httpsrv_tls.o ./lwip/src/apps/httpsrv/httpsrv_utf8.d ./lwip/src/apps/httpsrv/httpsrv_utf8.o ./lwip/src/apps/httpsrv/httpsrv_ws.d ./lwip/src/apps/httpsrv/httpsrv_ws.o ./lwip/src/apps/httpsrv/httpsrv_ws_api.d ./lwip/src/apps/httpsrv/httpsrv_ws_api.o
+
+.PHONY: clean-lwip-2f-src-2f-apps-2f-httpsrv
+
