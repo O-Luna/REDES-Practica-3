@@ -1,0 +1,11 @@
+../source/webconfig.c:91:12:CGI_HandleGet	80	static
+../source/webconfig.c:140:12:CGI_HandlePost	512	static
+../source/webconfig.c:267:12:CGI_HandleReset	104	static
+../source/webconfig.c:311:12:CGI_HandleStatus	360	static
+../source/webconfig.c:359:13:LinkStatusChangeCallback	16	static
+../source/webconfig.c:378:13:main_task	192	static
+../source/webconfig.c:479:17:SetBoardToAP	32	static
+../source/webconfig.c:507:17:CleanUpAP	8	static
+../source/webconfig.c:524:17:SetBoardToClient	32	static
+../source/webconfig.c:606:17:CleanUpClient	8	static
+../source/webconfig.c:630:5:main	16	static

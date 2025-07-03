@@ -1,0 +1,10 @@
+../source/webconfig_driver.c:47:12:CGI_HandleGet	80	static
+../source/webconfig_driver.c:96:12:CGI_HandlePost	512	static
+../source/webconfig_driver.c:223:12:CGI_HandleReset	104	static
+../source/webconfig_driver.c:267:12:CGI_HandleStatus	360	static
+../source/webconfig_driver.c:315:13:LinkStatusChangeCallback	16	static
+../source/webconfig_driver.c:334:6:main_task	192	static
+../source/webconfig_driver.c:435:17:SetBoardToAP	32	static
+../source/webconfig_driver.c:463:17:CleanUpAP	8	static
+../source/webconfig_driver.c:480:17:SetBoardToClient	32	static
+../source/webconfig_driver.c:563:17:CleanUpClient	8	static

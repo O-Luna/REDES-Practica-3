@@ -1,0 +1,13 @@
+D:\MCUXpresso_Workspace\frdmrw612_wifi_webconfig\drivers/fsl_gpio.h:210:20:GPIO_PortToggle	24	static
+../source/mqtt_freertos.c:72:13:mqtt_topic_subscribed_cb	24	static
+../source/mqtt_freertos.c:89:13:mqtt_incoming_publish_cb	24	static
+../source/mqtt_freertos.c:101:13:mqtt_incoming_data_cb	24	static
+../source/mqtt_freertos.c:168:13:mqtt_subscribe_topics	40	static
+../source/mqtt_freertos.c:196:13:mqtt_connection_cb	32	static
+../source/mqtt_freertos.c:242:13:connect_to_mqtt	24	static
+../source/mqtt_freertos.c:255:13:mqtt_message_published_cb	24	static
+../source/mqtt_freertos.c:272:13:publish_movement	48	static
+../source/mqtt_freertos.c:284:13:publish_smoke	48	static
+../source/mqtt_freertos.c:299:13:app_thread	24	static
+../source/mqtt_freertos.c:355:13:generate_client_id	56	static
+../source/mqtt_freertos.c:415:6:mqtt_freertos_run_thread	24	static
