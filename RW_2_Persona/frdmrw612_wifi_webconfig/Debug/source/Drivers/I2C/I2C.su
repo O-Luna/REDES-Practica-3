@@ -1,0 +1,8 @@
+../source/Drivers/I2C/I2C.c:59:13:Write	48	static
+../source/Drivers/I2C/I2C.c:77:13:Read	48	static
+../source/Drivers/I2C/I2C.c:94:16:ConvertData	16	static
+../source/Drivers/I2C/I2C.c:106:13:SelectChannel	24	static
+../source/Drivers/I2C/I2C.c:116:16:Databien	16	static
+../source/Drivers/I2C/I2C.c:136:6:Send_XYZ	24	static
+../source/Drivers/I2C/I2C.c:162:6:XYZ_GYRO	24	static
+../source/Drivers/I2C/I2C.c:182:6:Accelerometer_Init	8	static

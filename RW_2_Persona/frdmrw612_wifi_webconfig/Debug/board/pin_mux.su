@@ -1,0 +1,3 @@
+C:\Enr\redes\frdmrw612_wifi_webconfig\drivers/fsl_io_mux.h:1579:20:IO_MUX_SetPinMux	32	static
+../board/pin_mux.c:19:6:BOARD_InitBootPins	8	static
+../board/pin_mux.c:30:6:BOARD_InitPins	40	static

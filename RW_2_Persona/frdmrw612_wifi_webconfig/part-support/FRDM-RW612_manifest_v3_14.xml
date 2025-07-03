@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:manifest xmlns:ns2="http://nxp.com/ksdk/2.0/ksdk_manifest_v3.0.xsd" format_version="3.14" api_version="2.0.0" configuration="05535812fe6f8f2e1a92b51b6563cf44" id="SDK_2.x_FRDM-RW612" name="FRDM-RW612" brief="This is SDK version 2.16.100 manifest file. It describes the content of the FRDM-RW612 and additional settings for tools that support SDK version 2.16.100">
+    <externalDefinitions>
+        <definition extID="rdrw612bga"/>
+        <definition extID="rdrw612qfn"/>
+    </externalDefinitions>
+    <ksdk id="MCUXpresso216100" name="MCUXpresso216100" version="2.16.100" revision="epluginsite809 2024-10-02"/>
+    <compilers>
+        <compiler type="gcc" id="compiler_gcc" name="gcc"/>
+    </compilers>
+    <toolchainSettings>
+        <toolchainSetting id="com.nxp.mcuxpresso" name="mcuxpresso" full_name="MCUXpresso IDE" version="11.10.0" toolchain="mcuxpresso" compiler="compiler_gcc">
+            <option id="gnu.cpp.compiler.option.optimization.flags" type="string" user_name="">
+                <value>-fno-common</value>
+            </option>
+            <option id="gnu.c.compiler.option.optimization.flags" type="string" user_name="">
+                <value>-fno-common</value>
+            </option>
+            <option id="gnu.cpp.link.option.nostdlibs" type="boolean" user_name="">
+                <value>true</value>
+            </option>
+            <option id="com.crt.advproject.link.cpp.flashconfigenable" type="boolean" user_name="">
+                <value>true</value>
+            </option>
+            <option id="com.crt.advproject.link.flashconfigenable" type="boolean" user_name="">
+                <value>true</value>
+            </option>
+            <option id="gnu.c.link.option.nostdlibs" type="boolean" user_name="">
+                <value>true</value>
+            </option>
+        </toolchainSetting>
+    </toolchainSettings>
+    <toolchains>
+        <toolchain type="mcuxpresso" vendor="NXP Semiconductors" vendor_url="http://www.nxp.com" id="mcuxpresso" name="MCUXpresso_IDE" full_name="MCUXpresso IDE" version="11.10.0" compiler="compiler_gcc">
+            <debug>
+                <debug_configuration probe="LinkServer" id="com.crt.advproject.config.exe.release" name="Release Configuration">
+                    <scripts>
+                        <script type="init" silent="false" emulators="${gdb.stub} -mi -info-emu">
+                            <script>
+set remotetimeout 60000
+##target_extended_remote##
+set mem inaccessible-by-default ${mem.access}
+mon ondisconnect ${ondisconnect}
+set arm force-mode thumb
+${load}</script>
+                        </script>
+                        <script type="run" silent="false" emulators="${gdb.stub} -mi -info-emu">
+                            <script>${run}</script>
+                        </script>
+                    </scripts>
+                    <params>
+                        <params value="false" id="vector.catch.release.mcuxpresso" name="vector.catch"/>
+                        <params value="Disable" id="internal.cache.release.mcuxpresso" name="internal.cache"/>
+                    </params>
+                </debug_configuration>
+                <debug_configuration probe="LinkServer" id="com.crt.advproject.config.exe.debug" name="Debug Configuration">
+                    <scripts>
+                        <script type="init" silent="false" emulators="${gdb.stub} -mi -info-emu">
+                            <script>
+set remotetimeout 60000
+##target_extended_remote##
+set mem inaccessible-by-default ${mem.access}
+mon ondisconnect ${ondisconnect}
+set arm force-mode thumb
+${load}</script>
+                        </script>
+                        <script type="run" silent="false" emulators="${gdb.stub} -mi -info-emu">
+                            <script>${run}</script>
+                        </script>
+                    </scripts>
+                    <params>
+                        <params value="false" id="vector.catch.debug.mcuxpresso" name="vector.catch"/>
+                        <params value="Disable" id="internal.cache.debug.mcuxpresso" name="internal.cache"/>
+                    </params>
+                </debug_configuration>
+                <debug_configuration probe="Segger" id="com.nxp.mcuxpresso.core.debug.support.segger.debug" name="Debug Configuration"/>
+                <debug_configuration probe="Segger" id="com.nxp.mcuxpresso.core.debug.support.segger.release" name="Release Configuration"/>
+            </debug>
+        </toolchain>
+    </toolchains>
+    <boards>
+        <board package="RW612ETA2I" id="frdmrw612" name="FRDM-RW612" version="1.0.0">
+            <description>FRDM-RW612</description>
+            <memory>
+                <memoryBlock addr="08000000" size="00800000" type="ExtFlash" access="RO" id="QSPI_FLASH_frdmrw612" name="QSPI_FLASH"/>
+            </memory>
+            <debug_configurations>
+                <debug_configuration id_refs="com.crt.advproject.config.exe.debug com.crt.advproject.config.exe.release">
+                    <drivers>
+                        <driver id_refs="QSPI_FLASH_frdmrw612">
+                            <driverBinary path="devices/RW612/mcuxpresso" type="binary">
+<files mask="RW61X_FlexSPI_A_SFDP_QSPI.cfx"/>
+                            </driverBinary>
+                        </driver>
+                    </drivers>
+                </debug_configuration>
+            </debug_configurations>
+        </board>
+    </boards>
+    <devices>
+        <device family="RW61X" platform="RW" id="RW612" name="RW612" full_name="RW612" version="1.0.0">
+            <description>RW61X</description>
+            <metadataSet>
+                <metadata key="compatible_device.segger" value="RW612"/>
+                <metadata key="compatible_device.pemicro" value="RW612"/>
+                <metadata key="href" value="https://www.nxp.com/pip/RW612"/>
+                <metadata key="vendor" value="NXP"/>
+            </metadataSet>
+            <defines>
+                <define name="CPU_$|package|" value=""/>
+                <define name="CPU_$|package|_$|core|" value=""/>
+            </defines>
+            <core fpu="true" dsp="false" type="cm33_nodsp" id="cm33_RW612" name="cm33"/>
+            <memory>
+                <memoryBlock addr="00000000" size="00130000" type="RAM" access="RW" id="SRAM_RW612" name="SRAM"/>
+            </memory>
+            <total_memory flash_size_kb="0" ram_size_kb="1216"/>
+            <package id="RW612HNA2I" name="RW612HNA2I"/>
+            <package id="RW612ETA2I" name="RW612ETA2I"/>
+            <package id="RW612UKA2I" name="RW612UKA2I"/>
+            <evaluation_boards>
+                <evaluation_board name="frdmrw612"/>
+            </evaluation_boards>
+            <debug_configurations>
+                <debug_configuration id_refs="com.crt.advproject.config.exe.debug com.crt.advproject.config.exe.release">
+                    <params>
+                        <params value="SWD" id="internal.wiretype.release.RW612" name="internal.wiretype"/>
+                        <params value="true" id="internal.has_swo.release.RW612" name="internal.has_swo"/>
+                        <params value="--bootromstall 0x50002034" id="misc.options.RW612" name="misc.options"/>
+                        <params value="RW61x_connect.scp" id="internal.connect.script.debug.mcuxpresso.RW612" name="internal.connect.script"/>
+                    </params>
+                </debug_configuration>
+            </debug_configurations>
+            <linkerSettings nature="c_nature">
+                <linker property="start_symbol" value="ResetISR"/>
+                <linker property="text_align" value="4"/>
+                <linker property="data_align" value="4"/>
+                <linker property="bss_align" value="4"/>
+                <linker property="mtb_supported" value="false"/>
+            </linkerSettings>
+            <linkerSettings nature="cpp_nature">
+                <linker property="start_symbol" value="ResetISR"/>
+                <linker property="text_align" value="4"/>
+                <linker property="data_align" value="4"/>
+                <linker property="bss_align" value="4"/>
+                <linker property="mtb_supported" value="false"/>
+            </linkerSettings>
+        </device>
+    </devices>
+    <components>
+        <component user_visible="true" type="debugger" package_base_path="devices/RW612" project_base_path="svd" category="Board Support/SDK Project Template" id="platform.devices.RW612_debugger.RW612" name="Device RW612_debugger" full_name="Device RW612_debugger" brief="Device RW612_debugger" version="1.0.0">
+            <dependencies>
+                <device_dependency value="RW612"/>
+            </dependencies>
+            <source relative_path="./" type="xml">
+                <files mask="RW612.xml"/>
+            </source>
+        </component>
+    </components>
+</ns2:manifest>

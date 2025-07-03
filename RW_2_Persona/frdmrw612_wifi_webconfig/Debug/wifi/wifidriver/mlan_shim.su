@@ -1,0 +1,3 @@
+../wifi/wifidriver/mlan_shim.c:119:13:mlan_register	48	static
+../wifi/wifidriver/mlan_shim.c:283:22:mlan_unregister	32	static
+../wifi/wifidriver/mlan_shim.c:342:13:mlan_init_fw	24	static

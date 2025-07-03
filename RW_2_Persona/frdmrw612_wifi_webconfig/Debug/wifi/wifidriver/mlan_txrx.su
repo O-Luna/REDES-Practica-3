@@ -1,0 +1,3 @@
+C:\Enr\redes\frdmrw612_wifi_webconfig\wifi\wifidriver\incl/mlan_main.h:2913:22:wlan_get_priv_by_id	32	static
+C:\Enr\redes\frdmrw612_wifi_webconfig\wifi\wifidriver\incl/mlan_main.h:2940:22:wlan_get_priv	24	static
+../wifi/wifidriver/mlan_txrx.c:46:13:wlan_handle_rx_packet	32	static

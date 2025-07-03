@@ -1,0 +1,15 @@
+C:\Enr\redes\frdmrw612_wifi_webconfig\wifi\incl\port\net/wm_net.h:477:20:net_inet_ntoa	24	static
+../edgefast_wifi/source/wpl_nxp.c:77:5:wlan_event_callback	16	static
+../edgefast_wifi/source/wpl_nxp.c:167:11:WPL_Init	16	static
+../edgefast_wifi/source/wpl_nxp.c:208:11:WPL_Start	40	static
+../edgefast_wifi/source/wpl_nxp.c:256:11:WPL_Stop	16	static
+../edgefast_wifi/source/wpl_nxp.c:283:11:WPL_Start_AP	632	static
+../edgefast_wifi/source/wpl_nxp.c:395:11:WPL_Stop_AP	32	static
+../edgefast_wifi/source/wpl_nxp.c:453:12:WLP_process_results	256	static
+../edgefast_wifi/source/wpl_nxp.c:546:7:WPL_Scan	32	static
+../edgefast_wifi/source/wpl_nxp.c:587:11:WPL_AddNetworkWithSecurity	632	static
+../edgefast_wifi/source/wpl_nxp.c:670:11:WPL_AddNetwork	24	static
+../edgefast_wifi/source/wpl_nxp.c:675:11:WPL_RemoveNetwork	32	static
+../edgefast_wifi/source/wpl_nxp.c:703:11:WPL_Join	40	static
+../edgefast_wifi/source/wpl_nxp.c:774:11:WPL_Leave	32	static
+../edgefast_wifi/source/wpl_nxp.c:829:11:WPL_GetIP	112	static
