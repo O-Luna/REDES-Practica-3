@@ -1,6 +1,6 @@
 #include "Drivers/web_config/web_config_d.h"
 #include "Drivers/RGB/rgb.h"
-#include "Drivers/UART/uart_d.h"
+#include "Drivers/USART/usart_d.h"
 
 int main(void)
 {
@@ -32,7 +32,9 @@ int main(void)
     /* Create the main Task */
 
     LED_INIT();
-//    uart_init();
+
+    usart_init();
+
 
     if (xTaskCreate(main_task, "main_task", 2048, NULL, configMAX_PRIORITIES - 4, &g_BoardState.mainTask) != pdPASS)
     {
@@ -40,6 +42,7 @@ int main(void)
         while (1)
             ;
     }
+
     /* Run RTOS */
     vTaskStartScheduler();
 

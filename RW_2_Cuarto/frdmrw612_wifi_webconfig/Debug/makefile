@@ -18,7 +18,7 @@ RM := rm -rf
 -include utilities/subdir.mk
 -include startup/subdir.mk
 -include source/Drivers/web_config/subdir.mk
--include source/Drivers/UART/subdir.mk
+-include source/Drivers/USART/subdir.mk
 -include source/Drivers/RGB/subdir.mk
 -include source/Drivers/MQTT/subdir.mk
 -include source/subdir.mk

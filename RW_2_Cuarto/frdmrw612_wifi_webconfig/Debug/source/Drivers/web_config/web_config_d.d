@@ -88,7 +88,7 @@ source/Drivers/web_config/web_config_d.o \
  C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\lwip\src\include/lwip/prot/iana.h \
  C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\source/Drivers/RGB/rgb.h \
  C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\drivers/fsl_io_mux.h \
- C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\source/Drivers/UART/uart_d.h \
+ C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\source/Drivers/USART/usart_d.h \
  C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\drivers/fsl_usart.h
 C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\source/Drivers/web_config/web_config_d.h:
 C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\lwip\src\include/lwip/tcpip.h:
@@ -177,5 +177,5 @@ C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\lwip\src\include/lwip/a
 C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\lwip\src\include/lwip/prot/iana.h:
 C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\source/Drivers/RGB/rgb.h:
 C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\drivers/fsl_io_mux.h:
-C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\source/Drivers/UART/uart_d.h:
+C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\source/Drivers/USART/usart_d.h:
 C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\drivers/fsl_usart.h:

@@ -50,7 +50,7 @@ lwip/src/netif \
 lwip/src/netif/ppp \
 source/Drivers/MQTT \
 source/Drivers/RGB \
-source/Drivers/UART \
+source/Drivers/USART \
 source/Drivers/web_config \
 source \
 startup \

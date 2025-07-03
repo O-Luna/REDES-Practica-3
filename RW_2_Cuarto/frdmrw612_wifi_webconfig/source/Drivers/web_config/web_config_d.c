@@ -4,7 +4,8 @@
 #include "Drivers/web_config/web_config_d.h"
 #include "Drivers/MQTT/mqtt_freertos.h"
 #include "Drivers/RGB/rgb.h"
-#include "Drivers/UART/uart_d.h"
+#include "Drivers/USART/usart_d.h"
+
 /*******************************************************************************
  * Prototypes
  ******************************************************************************/
@@ -554,7 +555,7 @@ static uint32_t SetBoardToClient()
 
             //AQUI ACTIVAR LO DE MQTT
             PRINTF("Inicializando MQTT \r\n");
-
+//            usart_init();
             mqtt_freertos_run_thread(netif_default);
         }
     }

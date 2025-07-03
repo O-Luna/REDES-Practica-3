@@ -1,6 +1,0 @@
-C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\drivers/fsl_usart.h:709:20:USART_WriteByte	16	static
-C:\Embebidosk64\WORKSPACE_REDES\frdmrw612_wifi_webconfig\drivers/fsl_usart.h:723:23:USART_ReadByte	16	static
-../source/Drivers/UART/uart_d.c:11:13:uart_pin_init	32	static
-../source/Drivers/UART/uart_d.c:53:6:uart_init	40	static
-../source/Drivers/UART/uart_d.c:72:6:USART_ReadByte_NonBlocking	16	static
-../source/Drivers/UART/uart_d.c:81:6:uart_listener_task	32	static
